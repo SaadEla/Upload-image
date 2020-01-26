@@ -1,0 +1,11 @@
+<h3>Image Uploading Module</h3>
+
+<div>
+    <input #fileInput type="file" (change)="onFileChanged($event)" style="display: none">
+    <button type="button" (click)="fileInput.click()">Pick file</button>
+    <img [src]="imgURL" height="200" *ngIf="imgURL">
+</div>
+
+<input type="button" (click)="onUpload()" value="upload">
+
+<hr />
